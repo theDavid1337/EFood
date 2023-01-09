@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    transition: all 0.3s ease;
+}
+
+:root {
+    /* Colors */
+    --color-secondary: #FF7A50;
+    --color-primary: #363853;
+    --color-default: #ffffff;
+    --shadow-color-secondary: #ff683833;
+    --shadow-color-primary: #36385333;
+
+    /* Font-sizes */
+    --size-hero: 66px;
+    --size-heading: 36px;
+    --size-nav_item: 18px;
+    --size-content: 20px;
+    --size-offer: 14px;
+    --size-cons: 24px;
+    --size-logo: 35px;
+    --size-small: 12px;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 1%;
+    margin: 0 auto;
+}
+
+.color_secondary-span {
+    color: var(--color-secondary);
+}
+
+.same-style_btn {
+    font-size: var(--size-offer);
+    padding: 15px 25px;
+    background: var(--color-secondary);
+    color: var(--color-default);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 22px 40px var(--shadow-color-primary);
+}
+
+.same-style_btn:hover {
+    background: var(--color-primary);
+}
+
+.same-style_btn:active {
+    transform: scale(0.9);
+}
+
+.same-style_p {
+    text-transform: capitalize;
+    font-size: var(--size-content);
+    color: var(--color-primary);
+    margin: 20px 0;
+}
+
+header {
+    width: 100%;
+    padding: 20px 0px;
+    z-index: 9999;
+    background: var(--color-default);
+}
+
+header.active {
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 22px 40px var(--shadow-color-primary);
+    padding: 15px 0px;
+    z-index: 9999;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site_logo {
+    font-size: var(--size-logo);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_item {
+    position: relative;
+}
+
+.nav_item::before {
+    content: '';
+    position: absolute;
+    bottom: -7.5px;
+    right: 0px;
+    width: 0%;
+    height: 0px;
+    background: var(--color-secondary);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.nav_item.active::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: var(--color-primary);
+    opacity: 1;
+}
+
+.nav_link {
+    font-weight: 400;
+    font-size: var(--size-offer);
+    color: var(--color-primary);
+}
+
+.nav_item.active .nav_link {
+    color: var(--color-secondary);
+}
+
+.nav_item.previus .nav_link {
+    color: var(--color-default) !important;
+}
+
+.header_tools_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_icon {
+    font-size: var(--size-cons);
+    color: var(--color-primary);
+}
+
+.header_icon_cart {
+    position: relative;
+}
+
+.offers {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--color-secondary);
+    top: -7.5px;
+    right: -10.5px;
+    font-size: var(--size-small);
+    color: var(--color-default);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    opacity: 0;
+    transition: 0;
+}
+
+.header_icon_burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7.5px;
+    z-index: 99999;
+    font-size: var(--size-cons);
+    color: var(--color-primary);
+    display: none;
+}
+
+.header_icon_burger span {
+    width: 20px;
+    height: 1.5px;
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+.first_section_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first_section_left {
+    width: 50%;
+}
+
+.first_heading {
+    font-size: var(--size-hero);
+    color: var(--color-primary);
+}
+
+.first_btn_wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.first_section_right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first_section_right img {
+    width: 90%;
+}
+
+.first_link-p {
+    text-decoration-line: underline;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.first_link-p:hover {
+    text-decoration-line: none;
+}

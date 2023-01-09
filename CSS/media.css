@@ -1,0 +1,119 @@
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1000px) {
+
+    .first_section_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .first_section_left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .first_section_right {
+        width: 100%;
+    }
+
+    .first_section_right img {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 800px) {}
+
+@media screen and (max-width: 650px) {
+    .nav_menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .nav_menu.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-secondary);
+        color: var(--color-primary);
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .nav_item .nav_link {
+        color: var(--color-default);
+    }
+
+    .nav_item.active .nav_link {
+        color: var(--color-primary);
+    }
+
+    .header_icon_burger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --size-hero: 32px;
+        --size-heading: 24px;
+        --size-nav_item: 16px;
+        --size-content: 18px;
+        --size-offer: 12px;
+        --size-cons: 20px;
+        --size-logo: 26px;
+        --size-small: 10px;
+    }
+
+    .first_heading {
+        text-align: center;
+    }
+
+    .first_heading br {
+        display: none;
+    }
+
+    .same-style_p {
+        text-align: center;
+    }
+
+    .same-style_p br {
+        display: none;
+    }
+
+    .header_tools_wrapper {
+        gap: 10px;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .same-style_btn {
+        font-size: var(--size-offer);
+        padding: 7.5px 15px;
+        background: var(--color-secondary);
+        color: var(--color-default);
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 22px 40px var(--shadow-color-primary);
+    }
+}
