@@ -9,7 +9,10 @@ let offers = document.querySelector('.offers'),
     scroll_to = document.querySelector('.scroll'),
     food_options = document.querySelectorAll('.food_option'),
     option_toggle_icon = document.querySelector('.option_toggle-icon'),
-    second_options_wrapper = document.querySelector('.second_options-wrapper');
+    second_options_wrapper = document.querySelector('.second_options-wrapper'),
+    food_sample_cart_btn = document.querySelectorAll('.food_sample-cart_btn'),
+    counter = 1,
+    opacity = 1
 
 nav_item.forEach(elem => {
     elem.addEventListener('click', () => {
@@ -49,9 +52,13 @@ header_icon_burger.addEventListener('click', () => {
 })
 
 same_style_btn.addEventListener('click', () => {
-    offers.style.opacity = '1'
-    offers.innerHTML = '1'
+    updating_cart()
 })
+
+function updating_cart() {
+    offers.innerHTML = counter
+    offers.style.opacity = opacity
+}
 
 nav_link.forEach(elem => {
     elem.addEventListener('click', () => {
@@ -68,6 +75,14 @@ function updateProgressBar() {
     scrolling_line.style.width = `${scrollPercent}`;
 }
 
-option_toggle_icon.addEventListener('click', () => {
-    
+food_sample_cart_btn.forEach(elem => {
+    elem.addEventListener('click', () => {
+        if (elem.hasAttribute('name')) {
+            elem.removeAttribute('name')
+        } else {
+            elem.setAttribute('name', 'added-to-cart')
+            counter += 1
+        }
+        offers.innerHTML = counter
+    })
 })

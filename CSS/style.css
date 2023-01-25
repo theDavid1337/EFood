@@ -18,6 +18,7 @@
     --color-primary: #363853;
     --color-default: #F9FAFF;
     --color-white: #ffffff;
+    --color-yellow: #FAC412;
     --shadow-color-secondary: #ff683833;
     --shadow-color-primary: #36385333;
 
@@ -256,7 +257,9 @@ header.active {
 
 .second_section {
     padding: 30px 10px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .second_heading {
@@ -270,15 +273,10 @@ header.active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    gap: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 95%;
-    height: 60vh;
-    background: red;
+    width: 100%;
     padding: 10px;
+    gap: 50px;
+    margin-top: 20px;
 }
 
 .food_option {
@@ -287,7 +285,7 @@ header.active {
     align-items: flex-start;
     padding: 15px 20px;
     gap: 5px;
-    width: 15%;
+    width: 200px;
     border-radius: 8px;
     cursor: pointer;
     background: var(--color-white);
@@ -344,4 +342,69 @@ header.active {
     width: 40px;
     height: 5px;
     background: var(--color-primary);
+}
+
+.second_foods_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.food_sample {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 40px;
+    gap: 5px;
+    width: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--color-white);
+    white-space: nowrap;
+    box-shadow: 0px 10px 50px var(--shadow-color-primary);
+}
+
+.food_sample-img {
+    width: 130%;
+    height: auto;
+}
+
+.food_sample-star_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.food_sample-star_wrapper i {
+    color: var(--color-yellow);
+}
+
+.food_sample-name {
+    color: var(--color-primary);
+    margin-top: 5px;
+}
+
+.food_sample-price {
+    color: var(--color-primary);
+    margin-top: 5px;
+}
+
+.food_sample-cart_btn {
+    font-size: var(--size-offer);
+    padding: 7.5px 15px;
+    background: var(--color-secondary);
+    color: var(--color-white);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 12px 40px var(--shadow-color-primary);
+}
+
+.food_sample-cart_btn:active {
+    transform: scale(.9);
 }
